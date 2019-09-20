@@ -1,4 +1,4 @@
-#go-package-plantuml
+#Modified from Pingze-github/go-package-plantuml and qquunn/go-package-plantuml
 
 ## 修改
 + 用不同颜色表示私有和公有
