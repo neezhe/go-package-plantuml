@@ -900,8 +900,11 @@ func (this *analysisTool) fieldToString(f *ast.Field) string {
 
 	}
 
-	r += this.typeToString(f.Type, false)
-
+	realtype := this.typeToString(f.Type, false)
+	if strings.Contains(realtype, "%s") {
+		realtype = strings.Replace(realtype, " %s ", "", -1)
+	}
+	r += realtype
 	return r;
 }
 
